@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+    <script src="https://kit.fontawesome.com/976e422f89.js" crossorigin="anonymous"></script>
+    <title>Cart</title>
+    <link rel="stylesheet" href="cart.css" />
+</head>
+
+<body>
+    <div id="container">
+        <div class="nav">
+            <div class="logo">
+                <img src="	https://www.1mg.com/images/tata_1mg_logo.svg" width="124" height="35" alt="" />
+                <div>
+                    <input id="searchBarInfo" type="text" autocomplete="off" name="name" data-auto-search-bar="true"
+                        class="style-search-input" value="" placeholder="Search for Medicines and Health Products" />
+                    <div class="header_search_icon"></div>
+                </div>
+            </div>
+            <p>Need Help?</p>
+        </div>
+
+        <div class="main">
+            <div class="part-a">
+                <h3>Items NOT Requiring Prescription(3)</h3>
+                <div class="cart-items">
+                    <div class="item">
+                        <div class="item-info">
+                            <h2 style="font-size: 16px;"></h2>
+                            <p id="para" style="font-size:14px;"></p>
+                        </div>
+                    </div>
+                    <div class="price">
+                        <h1 style="font-size: 14px;"></h1>
+                        <div class="strikeoff">
+                            <p>MRP</p>
+                            <del style="font-size: 12px;"></del>
+                        </div>
+                    </div>
+                    <div class="remove">
+                        <div class="delete">
+                            <i>Quantity:1</i>
+                            <p>Remove</p>
+                        </div>
+                        <div class="item-num">
+                            <img src="https://www.1mg.com/images/minus-cart.svg
+                                        " alt="">
+                            <p>1</p>
+                            <img src="https://www.1mg.com/images/plus-cart.svg
+                                        " alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="part-b">
+                <div class="coupon">
+                    <div class="membership">
+                        <img src="https://onemg.gumlet.io/image/upload/v1625657833/ekjkxafxcqqg0oinr3fu.png" alt="">
+                        <h2 style="font-size: 16px;color: #1aab2a;">Yoc can save on this order</h2>
+                        <h3 style="font-size: 12px;">Become a member</h3>
+                        <p style="font-size: 12px;">Care plan membership ₹165 <del>₹549</del> / 3 months</p>
+                        <div class="buttons">
+                            <button id="btn-1" style="font-size: 16px;color: rgb(255,111,97); width: 150px;
+                                          border-radius: 5px;border: rgb(255,111,97);">Know More</button>
+                            <button id="btn-2" style="font-size: 16px;background-color: rgb(255,111,97);color: white; width: 150px;
+                                          border-radius: 5px;border: none;">Add to cart</button>
+                        </div>
+                        <hr>
+                        <div class="coupon-card">
+                            <div class="left-side">Apply Coupon</div>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="checkbox-info">
+                    <h2 style="font-size: 16px;">Check the Health of your vital organs now</h2>
+                    <div class="check">
+                        <input type="checkbox" id="checkbox">
+                        <div class="check-i">
+                            <p style="font-size: 14px;">Book a full body checkup starting at only ₹429</p>
+                            <p style="font-size: 12px;">Get this test done from the comfort of your home <br>
+                                Find out your health status
+                            </p>
+                            <a href="" style="font-size: 12px;text-decoration: none;">Pay later on home sample
+                                collection</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-fullinfo">
+                    <div class="mrp">
+                        <p>Item Total(MRP)</p>
+                        <p></p>
+                    </div>
+                    <div class="discount">
+                        <p>Price Discount</p>
+                        <p></p>
+                    </div>
+                    <hr>
+                    <div class="shipping">
+                        <p>Shipping Free</p>
+                        <p>As per delivery address</p>
+                    </div>
+                    <div class="pay">
+                        <p id="total">To be Paid</p>
+                        <p></p>
+                    </div>
+                    <div class="saving">
+                        <p>Total Saving</p>
+                        <p>₹200</p>
+                    </div>
+                </div>
+                <div class="check-out">
+                    <div class="location">
+                        <p>Your delivery location</p>
+                        <p>Karnataka</p>
+                    </div>
+                    <button class="btn" onclick="window.location.href = 'checkout.html'">CHECKKOUT</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+var cartdata = JSON.parse(localStorage.getItem("cartItems"))
+
+cartdata.map(function(elem){
+    console.log(cartdata)
+    var h2 = document.querySelector("h2")
+     h2.textContent = elem.h2
+
+     var p =document.querySelector("#para")
+     p.textContent =`₹${elem.price}`
+
+     var strike = document.querySelector("del")
+strike.textContent = elem.strike
+
+var h1 = document.querySelector("h1")
+h1.textContent = elem.p
+
+var total = cartdata.reduce(function(acc,cv){
+    return acc + Number(cv.price)
+},0)
+
+document.querySelector("#total").textContent = `Total amount is ₹${total}`
+})
+
+
+</script>

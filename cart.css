@@ -1,0 +1,202 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100vw;
+    height: auto;
+}
+
+/* nav */
+.nav{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 25px;
+    height: auto;
+align-items: center;
+}
+.nav .logo{
+    width: 70%;
+}
+.nav input{
+    width: 500px;
+    height: auto;
+border: none;
+outline: none;
+background-color: rgb(241,244,246);
+padding-left: 15px;
+border-radius: 5px;
+}
+.nav .logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+
+/* main */
+.main{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: rgb(241,244,246);
+    margin: auto;
+    justify-content: center;
+}
+.part-a{
+    display: flex;
+    flex-direction: column;
+    width: 37%;
+}
+.part-a .cart-items{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    background: white;
+    padding: 20px 0px;
+}
+
+.cart-items .item, .cart-items .price, .cart-items .remove{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding:0px 10px;
+}
+.item-num{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+.part-a h3{
+    font-size: 16px;
+    font-weight: 400;
+}
+.part-a p{
+    font-size: 12px;
+}
+.remove p{
+    font-size: 14px;
+}
+
+
+.part-b{
+    width: 30%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+.part-b .coupon{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    background: white;
+margin-top: 20px;
+padding: 15px;
+}
+
+.coupon .buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.coupon-card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 10px;
+}
+
+
+.checkbox-info{
+    width: 100%;
+    height: 160px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding: 10px;
+}
+.check{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+#checkbox{
+    width: 10%;
+}
+.check-i{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+
+
+
+.item-fullinfo{
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    margin-top: 25px;
+}
+.mrp, .discount, .shipping, .pay, .saving{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.check-out{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: white;
+    margin: 15px 0px;
+    padding: 0px 15px;
+}
+.location{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.btn{
+    width: 90%;
+    margin: auto;
+    height: auto;
+    padding: 10px;
+    background: rgb(255,111,97);
+    color: white;
+}
+
+
+@media screen and (max-width: 800px) { 
+    .main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .part-a{
+        width: 90%;
+    }
+    .part-b{
+        width: 90%;
+    }
+    .nav input{
+        display: none !important;
+    }
+}

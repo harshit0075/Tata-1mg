@@ -1,0 +1,190 @@
+
+.login-page .part, .signup-page .part{
+    display: flex;
+    flex-direction: row;
+    height: 500px;
+    width: 900px;
+    border-radius: 10px;
+    background-color: white;
+    
+}
+
+.mySlides {
+    display: none;
+}
+
+
+/* part-1 */
+
+.part .part-1 {
+    width: 50%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.part-1 img {
+    vertical-align: middle;
+    width: 400px;
+    height: 300px;
+}
+
+/* Caption text */
+.text {
+    color: #110f0f;
+    font-size: 15px;
+    width: 100%;
+    text-align: center;
+}
+.text h2{
+    font-size: 20px;
+    font-weight: 500;
+}
+.text p{
+    font-size: 14px;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+    .text {
+        font-size: 11px
+    }
+}
+
+                                          /* part 2 */
+
+.part .part-2 {
+    width: 50%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.part-2 .icon{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+.part-2 .head{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 70%;
+    margin: 0px auto;
+}
+.head-1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.head h2{
+    font-size: 28px;
+    font-weight: 500;
+}
+.head p{
+    font-size: 12px;
+}
+.part-2 input{
+border: none;
+border-bottom: 1px solid red;
+width: 316px;
+height: 40px;
+margin: 0px auto;
+margin-bottom: 65px;
+}
+.bottom{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: fit-content;
+}
+.bottom button{
+    border: none;
+    height: 40px;
+    width: 316px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: rgb(255,111,97);
+    border-radius: 5px;
+    color: white;
+}
+.txt, .txt2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.txt-1, .txt-2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.txt h3, .txt2 h3{
+    color: rgb(255,111,97);
+    font-size: 15px;
+    font-weight: 400;
+    /* line-height: 0; */
+}
+.tx2{
+    line-height: 0.4;
+}
+.txt, .txt2 p{
+    font-size: 14px;
+    color: rgb(151,151,151);
+    /* line-height: 0; */
+}
+.txt2 a{
+    font-size: 12px;
+    color: rgb(151,151,151);
+}

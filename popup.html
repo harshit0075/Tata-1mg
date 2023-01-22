@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="popup.css">
+    <script src="https://kit.fontawesome.com/976e422f89.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="popup-page">
+        <div class="part">
+            <div class="part-1">
+                <div class="slideshow-container">
+                    <div class="mySlides-fade">
+                        <img  alt="ew" class="img-con">
+                    </div>
+                </div>
+            </div>
+            <div class="part-2">
+                <div class="icon">
+                    <i class="fas fa-times" id="cut"></i>
+                </div>
+                <div class="head">
+                        <h2></h2>
+                    <p id="price" style="font-size: 18px;"></p>
+                    <del></del>
+                    <p id=offer style="font-size: 16px;"></p>
+                </div>
+                <div class="bottom">
+                    <p id="total"></p>
+                    <button onclick="window.location.href='../Cart and Upload/cart.html'">Add to Cart</button>
+                    <div class="txt">
+                        <div class="txt-1">
+                            <p>New on 1 mg?</p>
+                            <h3 >Sign Up</h3>
+                        </div>
+                        <div class="txt-2">
+                            <p>Have a corporate account?</p>
+                            <h3>Click Here</h3>
+                        </div>
+                    </div>
+                    <div class="txt2">
+                        <p>By logging in, you agree to our</p>
+                        <a href="https://www.1mg.com/tnc">Terms and Conditions & Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    var cartdata = JSON.parse(localStorage.getItem("cartItems"))
+
+    cartdata.map(function(elem){
+
+    var img = document.querySelector(".img-con")
+    img.setAttribute("src",elem.im)
+
+    var h2 = document.querySelector("h2")
+    h2.textContent = elem.h2
+
+    var p = document.querySelector("#price")
+    p.textContent = `₹${elem.price}`
+
+var strike = document.querySelector("del")
+strike.textContent = elem.strike
+
+var ofer = document.querySelector("#offer")
+ofer.textContent = elem.offer
+
+})
+console.log(cartdata)
+
+document.querySelector("#cut").addEventListener("click", function(){
+  window.location.href = "/home.html#daburid"
+})
+
+
+
+</script>
