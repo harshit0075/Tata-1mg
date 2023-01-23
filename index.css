@@ -3,6 +3,7 @@ body {
     padding: 0%;
     margin: 0%;
   }
+  .nav
   #carousel {
     background: white;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
@@ -125,12 +126,7 @@ body {
   #mg > div {
    padding: 0px 4px;
   }
-  /* @media only screen and (max-width: 680px){
-    #mg{
-     grid-template-columns: repeat(2, 1fr);
-    }
-     
-   } */
+  
 
   #pro {
     width: 100%;
