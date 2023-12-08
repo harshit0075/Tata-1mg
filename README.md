@@ -4,18 +4,18 @@ Tata 1mg is an e-commerce website backed by Tata Group. The site is focused on p
 
 Link to the original site: "https://www.1mg.com/"
 
-Project_Objective:
+## Project_Objective:
 
 My objective is to replicate the original site with all the functionalities and design elements. I aim to create the best clone of the website using the skills we have learnt through Masai School.
 
-Softwares:
+## Softwares:
 
 I used the following softwares:
 
 VS Code - To write HTML,CSS and JavaScript code.
 GitHub Desktop - To maintain the Git repository.
 Microsoft Edge,Google Chrome & Mozilla Firefox - To check the functionality and output of the code.
-Languages:
+## Languages:
 
 I wrote the code in the following languages:
 
